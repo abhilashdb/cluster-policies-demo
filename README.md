@@ -19,6 +19,22 @@ The Cluster Policies API allows you to create, list, and edit cluster policies. 
 https://docs.databricks.com/dev-tools/api/latest/policies.html#cluster-policies-api-20
 https://docs.databricks.com/dev-tools/cli/cluster-policies-cli.html
 
+CLI example - 
+
+Request:
+
+``` 
+(venv) user@ABCDEFGH databricks-demo % databricks cluster-policies create --json-file cluster-policies-example-1/workspace/workspace-id-1/teamA-interactive-medium-autoscale-stringify.json --profile <profile name> 
+```
+
+Response:
+
+``` 
+{
+  "policy_id": <policy id>
+} 
+```
+
 - **Cluster policy permissions API**
 
 The Cluster Policy Permissions API enables you to set permissions on a cluster policy. When you grant CAN_USE permission on a policy to a user, the user will be able to create new clusters based on it. A user does not need the cluster_create permission to create new clusters.
