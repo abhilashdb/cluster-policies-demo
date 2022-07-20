@@ -1,6 +1,4 @@
 {
-  "name": "teamA-interactive-medium-autoscale",
-  "definition": " {
   "cluster_type": {
     "type": "fixed",
     "value": "all-purpose"
@@ -47,4 +45,4 @@
     "type": "fixed",
     "value": "teamA"
   }
-}"
+}
