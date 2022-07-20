@@ -1,0 +1,38 @@
+{"cluster_type": {
+    "type": "fixed",
+    "value": "job"
+  },
+  "autoscale.min_workers": {
+    "type": "range",
+    "maxValue": 10,
+    "defaultValue": 2
+  },
+  "autoscale.max_workers": {
+    "type": "range",
+    "maxValue": 30,
+    "defaultValue": 4
+  },
+  "node_type_id": {
+    "type": "blocklist",
+    "values": ["z1d.12xlarge", "z1d.6xlarge", "r5d.16xlarge", "r5a.24xlarge", "c5.24xlarge"],
+    "defaultValue": "i3.xlarge"
+  },
+  "driver_node_type_id": {
+    "type": "blocklist",
+    "values": ["z1d.12xlarge", "z1d.6xlarge", "r5d.16xlarge", "r5a.24xlarge", "c5.24xlarge"],
+    "defaultValue": "i3.xlarge"
+  },
+  "spark_version": {
+    "type": "regex",
+    "pattern": "10\\.[0-9]+\\.x-scala.*"
+  },
+  "enable_elastic_disk": {
+    "type": "fixed",
+    "value": true,
+    "hidden": true
+  },
+  "custom_tags.team": {
+    "type": "fixed",
+    "value": "product"
+  }
+}
